@@ -3,11 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--  Aquí comença el menu horitzontal per posar el botons  dins un Lnear Layout-->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/horizontalScrollView" >
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -48,6 +48,7 @@
 
         </LinearLayout>
     </HorizontalScrollView>
+
 <!--   el height ha de ser wrap pq tots dos es vegin        -->
 
     <HorizontalScrollView
@@ -59,7 +60,7 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <!--  Layout central on hi ha imatge primer i text abaix      -->
+            <!--  Layout central on hi ha imatge primer i text abaix amb 5 exemples de plats introduits això ho farem dinamic amb un arxiu java      -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -99,6 +100,7 @@
                         android:id="@+id/textView2" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -137,7 +139,9 @@
                         android:textColor="#FFFFFF"
                         android:id="@+id/textView6" />
                 </LinearLayout>
-            </LinearLayout><LinearLayout
+            </LinearLayout>
+
+            <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,7 +179,9 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/textView456" />
             </LinearLayout>
-        </LinearLayout><LinearLayout
+        </LinearLayout>
+
+            <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,7 +219,8 @@
                     android:textColor="#FFFFFF"
                     android:id="@+id/textView20" />
             </LinearLayout>
-        </LinearLayout><LinearLayout
+        </LinearLayout>
+            <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -254,6 +261,8 @@
         </LinearLayout>
         </LinearLayout>
     </HorizontalScrollView>
+
+    <!--  Aquí comença el LinerLayout final per posar la ubicació -->
 
     <LinearLayout
         android:orientation="vertical"

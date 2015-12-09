@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 /**
  * Created by biel on 28/11/15.
+ * És per consultar tota la informació d'un plat. La del perfil d'usuari tendra el mateix format en quan al xml.
  */
 public class fitxa_plat extends AppCompatActivity  {
 

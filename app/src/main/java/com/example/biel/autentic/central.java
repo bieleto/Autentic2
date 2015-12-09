@@ -10,7 +10,12 @@ import android.widget.ImageView;
 
 /**
  * Created by biel on 28/11/15.
+ * És la pantalla de navegació on navegarem per  veure els resultats segons els nostres criteris de cerca
+ * El més visitat, etc...
+
  */
+
+
 public class central extends AppCompatActivity {
 
 // sempre copiam lo mateix onCreate buit i posam que el R.layout és el nou xml

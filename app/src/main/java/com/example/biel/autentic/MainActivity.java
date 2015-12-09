@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+
+
+
+//És la pantalla principal on surtirà el menu principal que seran X botons.
 public class MainActivity extends AppCompatActivity {
 
     @Override
