@@ -30,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="1">
+
 <!--   android:weightSum="1"> pesa 1 i despres els altres faig que agafin la meitat   android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".50">
