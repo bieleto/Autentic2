@@ -9,6 +9,31 @@
         android:title="mapa"
         android:icon="@android:drawable/ic_dialog_map"
         app:showAsAction="always"></item>
+    <item
+        android:id="@+id/action_cerca"
+        android:orderInCategory="10"
+        android:title="@string/cerca"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="collapseActionView|always"
+        android:actionViewClass="android.support.v7.widget.SearchView"
+        android:actionLayout="@android:drawable/btn_star_big_on"
+        ></item>
+
+
+
+    <item
+        android:id="@+id/action_refresh"
+        android:orderInCategory="200"
+        android:title="@string/refresh"
+        android:icon="@android:drawable/stat_notify_sync_noanim"
+        app:showAsAction="always"></item>
+
+    <item
+        android:id="@+id/action_camera"
+        android:orderInCategory="200"
+        android:title="@string/foto"
+        android:icon="@android:drawable/ic_menu_camera"
+        app:showAsAction="always"></item>
 
 
 </menu>

@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Autentic</string>
+
+    <string name="foto">foto</string>
+    <string name="cerca">cerca</string>
+    <string name="refresh">Refresca</string>
+
+
+
+
+
+
     <string name="boto_menu1">EL millor</string>
     <string name="boto_menu2">EL pitjor</string>
     <string name="boto_menu3">Aprop</string>
