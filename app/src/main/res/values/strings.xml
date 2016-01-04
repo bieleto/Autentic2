@@ -11,9 +11,13 @@
 
 
     <string name="boto_menu1">EL millor</string>
-    <string name="boto_menu2">EL pitjor</string>
+    <string name="boto_menu2">Nous</string>
     <string name="boto_menu3">Aprop</string>
-    <string name="boto_menu4">EL que seguesc</string>
-    <string name="boto_menu5">el mes vist</string>
+    <string name="boto_menu4">Seguesc</string>
+    <string name="boto_menu5">Jo</string>
+
+    <!-- La secció Seguesc i El millor tendran un desplegable cap aball per poder subtriar més opcions. -->
+
+
 
 </resources>

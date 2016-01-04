@@ -6,7 +6,8 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView" >
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
 
         <LinearLayout
             android:orientation="vertical"
@@ -78,17 +79,19 @@
                     android:layout_weight=".50">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="77dp"
+                        android:layout_height="77dp"
                         android:id="@+id/imageView2"
-                        android:src="@drawable/picapica1"/>
+                        android:src="@drawable/googlemaps"
+                        android:layout_gravity="right" />
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
                 <!--Aqui no feim lo d'abans de =1 i despres posar 0.5 pq tendrem botons que ja es colocaran més o menys bé entre ells-->
 
                 <ImageView
@@ -107,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView5"
-                    android:src="@drawable/button_exemple1"/>
+                    android:src="@drawable/button_exemple1" />
             </LinearLayout>
 
             <LinearLayout

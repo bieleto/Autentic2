@@ -13,7 +13,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name="com.example.biel.autentic.Autentic">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,13 +25,13 @@
 
         <!--  declaram l'activitat central que és on va el primer boto    i posam el nom que li donarem tots és el mateix :label autentic  -->
         <activity
-            android:name=".central"
+            android:name=".Central"
             android:label="@string/app_name">
 
         </activity>
         <!--  declaram l'activitat fitxa_plat per quan pitjam damunt un plat   -->
 
-        <activity android:name=".fitxa_plat"
+        <activity android:name=".FitxaPlat"
             android:label="@string/app_name"></activity>
 
 
