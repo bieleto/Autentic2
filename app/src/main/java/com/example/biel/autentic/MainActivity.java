@@ -18,28 +18,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-//Afegit dia 9 12 15 se podrà borrar segurament//
-        //he de crear el toolbar inicial d'alt on posaré la cerca mapa foto refresca.
-        //Aquesta declaració necessita fer
-       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar)
-////////////////////////////////////////////
-
         //Referenciam el primer boto de la vista xml fer-ho 4 pics per el 4 botons
         ImageButton botocentral = (ImageButton) findViewById(R.id.botocentral);
 
-        //Quan pitjam el boto que feim? lisener
+        ImageButton botoDynamiccentral = (ImageButton) findViewById(R.id.boto_notificacions);
+
+
+
 
         botocentral.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"He pitjat boto Explorar", Toast.LENGTH_SHORT).show();
                 // ha d'anar a una altre activitat feim un Intent que és per canviar d'activitats
                 // on estic .this on he d'anar que és el .java
                 Intent central = new Intent(MainActivity.this, Central.class);
                 // Ara l'executam. Adalt el cream
                 startActivity(central);
+                finish();
+
+            }
+        });
+
+        botoDynamiccentral.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"He pitjat boto notificacions", Toast.LENGTH_SHORT).show();
+                Intent dynamiccentral = new Intent(MainActivity.this, Dynamicentral.class);
+                startActivity(dynamiccentral);
                 finish();
             }
         });
@@ -86,30 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-
-/*Afegit dia 9 12 15 se podrà borrar segurament
-@Override
-    public boolean onOptionsItemSelection (MenuItem item){
-//Elements de la barra d'acció principal. Botons on podrem clicar
-// Com hem espicifat una activitat principal al Android Manifest
-    int id = item.getItemId();
-    //Feim els casos del que poden pitjar
-    switch (item.getItemId()){
-        case R.id.action_map:
-            Toast.makeText(this, "Acción Mapa", Toast.LENGTH_SHORT).show();
-            return true;
-
-        default:
-            return super.onOptionsItemSelected(item);
-
-    }
-
-
-}
-
-Afegit dia 9 12 15 se podrà borrar segurament */
 
 
 

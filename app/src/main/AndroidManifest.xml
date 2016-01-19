@@ -5,9 +5,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
 
-
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,6 +31,9 @@
         <activity android:name=".FitxaPlat"
             android:label="@string/app_name"></activity>
 
+        <!--  declaram l'activitat dynamic central per fer proves de carregar dinamicament el que tenim a la Base de DADES   -->
+        <activity android:name=".Dynamicentral"
+            android:label="@string/app_name"></activity>
 
 
     </application>

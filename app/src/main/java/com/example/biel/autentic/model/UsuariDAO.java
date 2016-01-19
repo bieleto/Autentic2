@@ -25,7 +25,7 @@ public class UsuariDAO {
     public UsuariDAO (Context context) {
         this.context = context;
         tablesHelper = TablesHelper.getHelper(context);
-        open();
+      //  open();
 
     }
 

@@ -30,6 +30,7 @@ public class Constants {
     // Columnes taula berenar
     public static final String BERENAR_ID = "idBerenar";
     public static final String BERENAR_TIPUS = "tipus";
+    public static final String BERENAR_DESCRIPCIO = "descripció";
     public static final String BERENAR_NOM = "nom";
     public static final String BERENAR_FOTO = "foto";
     public static final String BERENAR_DATA = "data";
@@ -38,7 +39,7 @@ public class Constants {
     public static final String BAR_ID = "idBar";
     public static final String BAR_NOM = "nom";
     public static final String BAR_DIRECCIO = "direccio";
-
+    public static final String BAR_POBLE_CIUTAT = "poble";
 
     // Colunmes taula seguidor
     public static final String SEGUIDOR_ID = "idSeguidor";
@@ -66,6 +67,18 @@ public class Constants {
     public static final String CRITERI_ID = "idCriteri";
     public static final String CRITERI_NOM = "nom";
     public static final String CRITERI_VALOR = "valor";//Normalment serà un nombre per poder calcular l'afinitat.
+
+    // Constanstes de estado para Cental
+    public static final int ESTAT_NOU = 0;
+    public static final int ESTAT_SEGUIDORS = 1;
+    public static final int ESTAT_APROP = 2;
+    public static final int ESTAT_JO = 3;
+
+// Exemple de com definiré els criteris dels diferents exemples per quan se mostrin a l'aplicació dins fitxa plat
+    public static final String DURO = "Duro";
+    public static final String BLANDO = "Blando";
+    public static final String [] criteriPan = {DURO, BLANDO};
+
 
 
 }

@@ -12,7 +12,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.biel.autentic.model.BerenarDAO;
+import com.example.biel.autentic.objects.Berenar;
+import com.example.biel.autentic.server.Server;
 import com.example.biel.autentic.utils.Constants;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by biel on 28/11/15.
@@ -25,6 +31,10 @@ import com.example.biel.autentic.utils.Constants;
 public class Central extends AppCompatActivity {
 
     private int idBerenar;
+    private BerenarDAO berenarDAO;
+    private Server server;
+    private List<Berenar> berenars;
+    private int estat;
 
 // sempre copiam lo mateix onCreate buit i posam que el R.layout és el nou xml
 
@@ -32,19 +42,22 @@ public class Central extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.central);
-
-        // DRO
+        estat = 0;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+        server = new Server(this);
+        berenars = new ArrayList<Berenar>();
 
-       // FitxaPlat db = new FitxaPlat(this);
+        getBerenarByState();
+       /*Ens dona error quan entra a central a una d'aquestes pases!!!!!!!!!! Revisar
 
-        FitxaDAO db = new FitxaDAO(this);
+        getBerenarByState();
+*/
 
 
 //referenciam les imatges que tenim al central.xml per fer les botons
 
-        ImageView imatge1 = (ImageView) findViewById(R.id.imageButton4);
+        ImageView imatge1 = (ImageView) findViewById(R.id.botoMillor);
         //Per quan pitgin l'imatge faci algo
         imatge1.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -61,10 +74,8 @@ public class Central extends AppCompatActivity {
             }
         });
 
-
-
-
     }
+
 //és el menu de la action bar principal
     @Override
     public boolean onCreateOptionsMenu (Menu menu){
@@ -79,11 +90,9 @@ public class Central extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
         Log.e("central Menu ", " " + id);
 
 //per si el necessit per llegir si pitja damunt autentic---
-
 
         switch (item.getItemId()){
             case R.id.action_camera:
@@ -101,7 +110,6 @@ public class Central extends AppCompatActivity {
             case R.mipmap.ic_launcher:
                 Toast.makeText(this,"Acció principal",Toast.LENGTH_SHORT).show();
                 return true;
-            // DRO
             case android.R.id.home:
                 Intent mainActivity = new Intent(this, MainActivity.class);
                 // Ara l'executam. Adalt el cream
@@ -112,5 +120,32 @@ public class Central extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+    private void getBerenarByState(){
+
+        switch (estat) {
+            case Constants.ESTAT_NOU:
+                berenars = server.getBerenarOrderByData();
+                break;
+            case Constants.ESTAT_SEGUIDORS:
+                //De moment no el desenvolup
+                break;
+            case Constants.ESTAT_APROP:
+                //De moment no el desenvolup
+                break;
+            case Constants.ESTAT_JO:
+                //berenars = server.getBerenarByUser(1);// De moment ho pos a ma pq jo seré l'usuari 1
+                break;
+            default:
+                // En principi no entrarà aquí
+                break;
+    }
+
+        Toast.makeText(Central.this,"Faig el getBerenarByState", Toast.LENGTH_SHORT).show();
+
+
+    }
+
 
 }

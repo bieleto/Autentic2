@@ -10,6 +10,7 @@ import com.example.biel.autentic.utils.Constants;
 import java.sql.SQLException;
 
 /**
+ * Ja veurem si hem de implementar els procediments d'aquí, de moment esperarem.
  * Created by biel on 30/12/15.
  */
 public class BarDAO {
@@ -19,7 +20,7 @@ public class BarDAO {
     public BarDAO (Context context){
         this.context = context;
         tablesHelper = TablesHelper.getHelper(context);
-        open();
+       // open();
     }
     //Definesc el procediment open emprat més amunt
     public void open() throws SQLException {
