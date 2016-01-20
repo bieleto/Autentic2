@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  Aquí comença el menu horitzontal per posar el botons  dins un Lnear Layout-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView" >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boto_menu2"
+                android:id="@+id/button2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boto_menu3"
+                android:id="@+id/button3" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boto_menu4"
+                android:id="@+id/button4" />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boto_menu5"
+                android:id="@+id/button5" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--   el height ha de ser wrap pq tots dos es vegin        -->
+
+
+
+        <!--  Aquí comença el LinerLayout final per posar la ubicació -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--  Layout central on hi ha imatge primer i text abaix amb 5 exemples de plats introduits això ho farem dinamic amb un arxiu java      -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ViewFlipper
+
+                        android:id="@+id/viewFlipper"
+                        android:layout_width="326dp"
+                        android:layout_height="255dp"
+                        android:layout_gravity="center_horizontal">
+
+                    </ViewFlipper>
+
+                    <!--android:src="@drawable/frit4"-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bar l'Altura"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/NomBar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ubicació: Lloseta"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/NomBerenar" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La meva ubicació és_ 0,0003 0.9988 . Lloseta"
+            android:id="@+id/textView3" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+<!--
+
+    <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Dynamicentral">
+    tools:context=".Dynamicentral"
+    android:weightSum="1">
 
 <ViewFlipper
+
     android:id="@+id/viewFlipper"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    ></ViewFlipper>
+    android:layout_width="326dp"
+    android:layout_height="255dp"
+    android:layout_gravity="center_horizontal">
 
 
-<RelativeLayout
+
+</ViewFlipper>
+
+
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="0">
+    android:layout_gravity="center_horizontal"
+    android:layout_weight="0.10">
 
     <Button
         android:id="@+id/botoanterior"
@@ -44,3 +176,5 @@
 
 
 </LinearLayout>
+
+-->

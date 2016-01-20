@@ -28,6 +28,8 @@ public class Dynamicentral extends AppCompatActivity{
     private int index = 0;
 
     private ViewFlipper mVistaFlipper;
+    private String  mTextImatge;
+
     private Button mAnteriorButton;
     private Button mSeguentButton;
  //// altres declaracions
@@ -40,8 +42,9 @@ public class Dynamicentral extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dynamicentral);
+
         estat=0;
-        // a n'aquest Layout de moment no tenim la ActionBar
+        // a n'aquest Layout de moment no tenim l'ActionBar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -52,9 +55,12 @@ public class Dynamicentral extends AppCompatActivity{
 
 
 
+
         mVistaFlipper = (ViewFlipper) findViewById(R.id.viewFlipper);//Declarat al XML
-        mAnteriorButton = (Button) findViewById(R.id.botoanterior);//declarat al XML
-        mSeguentButton = (Button) findViewById(R.id.botoseguent);//declarat al XML
+
+
+        mAnteriorButton = (Button) findViewById(R.id.button2);//declarat al XML
+        mSeguentButton = (Button) findViewById(R.id.button3);//declarat al XML
 
         ImageView image = getNovaImatgeView();
         image.setImageResource(R.drawable.frit1);//ic_launcher...?
